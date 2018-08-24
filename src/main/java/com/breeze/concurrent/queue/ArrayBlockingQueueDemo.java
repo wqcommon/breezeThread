@@ -8,6 +8,8 @@ import java.util.concurrent.TimeUnit;
  * @date 2018/7/30 17:24
  *
  * 基于数组实现的线程安全的阻塞队列
+ *
+ * 有界队列
  */
 public class ArrayBlockingQueueDemo {
 
