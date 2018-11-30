@@ -20,6 +20,7 @@ public class SynchronousQueueDemo {
 
     public static void main(String[] args) throws InterruptedException {
 
+
         //队尾匹配队头出队，先进先出，体现公平原则，采用TransferQueue实现
 //        SynchronousQueue<Integer> queue = new SynchronousQueue<>(true);
 //        new Thread(){
@@ -44,6 +45,7 @@ public class SynchronousQueueDemo {
             }
         }.start();
 
+        Thread.sleep(2000);
         new Thread(){
             @Override
             public void run() {
