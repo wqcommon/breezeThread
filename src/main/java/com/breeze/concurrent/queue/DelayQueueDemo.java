@@ -62,8 +62,9 @@ class DqTask implements Delayed {
     @Override
     public long getDelay(TimeUnit unit) {
         LocalDateTime time = LocalDateTime.parse(insertTime,dateTimeFormatter);
-        long delay = ChronoUnit.NANOS.between(LocalDateTime.now(),time);
-        return delay;
+        long delay = ChronoUnit.SECONDS.between(LocalDateTime.now(),time);
+        return unit.convert(delay,TimeUnit.SECONDS);
+
     }
 
     @Override
